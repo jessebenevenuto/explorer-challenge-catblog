@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+html, 
+body {
+  width: 100vw;
+  height: 100vh;
+
+  overflow-x: hidden;
+}
+
+html,
+body,
+input {
+  font-family: 'Mulish', sans-serif;
+  font-size: 1.6rem;
+}
+
+#app {
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+
+  /* height: 100vh; */
+}
+
+.wrapper {
+  max-width: 43rem;
+  margin: 0 auto;
+
+  padding-inline: 2.4rem;
+}
+
+header {
+  /* width: 100%; */
+  background: #065E7C;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 2.6rem;
+
+  padding: 1.6rem 0;
+}
+
+header .logo {
+  border-radius: 50%;
+  padding: .8rem;
+
+  background: #F4FCFF;
+}
+
+header form {
+  flex: 1;
+}
+
+.input-wrapper label {
+  width: 1px;
+  height: 1px;
+
+  position: absolute;
+
+  overflow: hidden;
+}
+
+.input-wrapper input {
+  /* font-weight: 600; */
+  line-height: 100%;
+
+  width: 100%;
+
+  background: #ffffff33;
+
+  border: none;
+  border-radius: .4rem;
+  padding: 1.2rem 1.4rem;
+}
+
+.input-wrapper input::placeholder {
+  color: white;
+}
+
+.avatar {
+  width: 4.2rem;
+  height: 4.2rem;
+
+  border-radius: 50%;
+}
+
+.banner {
+  max-width: 43rem;
+  margin: 0 auto;
+}
+
+.banner img {
+  width: 100%;
+  display: block;
+
+  border-radius: .5rem;
+}
+
+main h1 {
+  margin-top: 3.2rem;
+
+  font-size: 2.4rem;
+  /* line-height: 160%; */
+  line-height: 3.8rem;
+  color: #202024;
+}
+
+.feedback-buttons {
+  margin-top: .8rem;
+}
+
+.feedback-buttons img {
+  background: #065E7C;
+  
+  border-radius: 50%;
+  padding: 1.2rem;
+}
+
+.feedback-buttons img + img {
+  margin-left: .8rem;
+}
+
+.paragraphs {
+  margin: 3.2rem 0;
+}
+
+.paragraphs p {
+  line-height: 2.6rem;
+  color: #121214;
+}
+
+.paragraphs p + p {
+  margin-top: 2.4rem;
+}
+
+aside h2 {
+  font-size: 2.4rem;
+  line-height: 3.8rem;
+  color: #202024;
+}
+
+.article {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  gap: 1.6rem;
+
+  margin-top: 3.2rem;
+}
+
+.article h4 {
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  color: #202024;
+}
+
+.article p {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  color: #121214;
+}
+
+footer {
+  text-align: center;
+
+  background: #387E96;
+  
+  margin-top: 3.2rem;
+  padding: 2.8rem 1.6rem;
+}
+
+footer p {
+  font-weight: 600;
+  color: white;
+}
+
+@media (max-width: 375px) {
+  .article {
+    grid-template-columns: auto;
+  }
+
+  .article img {
+    width: 100%;
+  }
+}
