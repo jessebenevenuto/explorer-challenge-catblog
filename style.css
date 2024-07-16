@@ -27,7 +27,7 @@ input {
   display: grid;
   grid-template-rows: max-content 1fr max-content;
   
-  /* height: 100vh; */
+  height: 100vh;
 }
 
 .wrapper {
@@ -120,31 +120,31 @@ main h1 {
   color: #202024;
 }
 
-.feedback-buttons {
+.button {
   margin-top: .8rem;
 }
 
-.feedback-buttons img {
+.button img {
   background: #065E7C;
   
   border-radius: 50%;
   padding: 1.2rem;
 }
 
-.feedback-buttons img + img {
+.button img + img {
   margin-left: .8rem;
 }
 
-.paragraphs {
+/* .text {
   margin: 3.2rem 0;
-}
+} */
 
-.paragraphs p {
+.text p {
   line-height: 2.6rem;
   color: #121214;
 }
 
-.paragraphs p + p {
+.text p + p {
   margin-top: 2.4rem;
 }
 
@@ -180,7 +180,7 @@ footer {
 
   background: #387E96;
   
-  margin-top: 3.2rem;
+  /* margin-top: 3.2rem; */
   padding: 2.8rem 1.6rem;
 }
 
@@ -202,36 +202,62 @@ footer p {
 @media (min-width: 1024px) {
   #app {
     grid-template-areas:
-      "header header header"
-      "main main aside"
-      "footer footer footer";
+      "header header"
+      "main aside"
+      "footer footer";
+    
+      gap: 4rem 3.2rem;
+  }
+
+  .wrapper {
+    max-width: initial;
+    padding: initial;
+    margin: initial;
   }
 
   #app header {
     grid-area: header;
   }
 
+  #app header .wrapper {
+    max-width: calc(121.6rem + 3.2rem);
+    padding: 1.6rem;
+    margin-inline: auto;
+  }
+
   #app main {
     grid-area: main;
+  }
+
+  #app main.wrapper {
+    max-width: 80.3rem;
+    margin-left: auto;
   }
 
   #app aside {
     grid-area: aside;
   }
 
+  #app aside.wrapper {
+    max-width: 38.2rem;
+  }
+
   #app footer {
     grid-area: footer;
   }
 
-  .wrapper {
+  /* .wrapper {
     max-width: 100%;
-  }
+  } */
 
-  .wrapper {
+  /* .wrapper {
+    max-width: 121.6rem;
+
     margin-inline: 8rem;
-
     padding-inline: 0;
-  }
+  } */
+
+
 
   /* #content-wrapper {
     display: grid;
@@ -247,7 +273,7 @@ footer p {
     grid-column: 3/4;
   } */
 
-  main {
+  /* main {
     max-width: 80rem;
   }
 
@@ -255,12 +281,8 @@ footer p {
     max-width: 38.4rem;
   }
 
-  #content-wrapper {
+  .content-wrapper {
     display: flex;
     gap: 3.4rem;
-  }
-
-  .banner {
-    max-width: 100%;
-  }
+  } */
 }
