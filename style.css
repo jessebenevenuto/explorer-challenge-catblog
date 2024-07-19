@@ -126,6 +126,19 @@ main h1 {
   margin-left: .8rem;
 }
 
+.like,
+.dislike {
+  transition: 200ms;
+}
+
+.like:hover {
+  transform: scale(1.1) rotate(-8deg);
+}
+
+.dislike:hover {
+  transform: scale(1.1) rotate(8deg);
+}
+
 .text {
   margin-top: 3.2rem;
 }
@@ -156,6 +169,23 @@ aside h2 {
   gap: 1.6rem;
 
   margin-top: 3.2rem;
+
+  --delay: .4s;
+  animation: appear .4s var(--delay) backwards;
+
+  /* overflow: hidden; */
+  background: white;
+}
+
+.article img {
+  transition: all 200ms ease-out;
+
+  display: block;
+}
+
+.article:hover {
+  filter: hue-rotate(7deg) contrast(101%) saturate(200%);
+  transform: scale(1.025);
 }
 
 .article h4 {
@@ -181,6 +211,17 @@ footer {
 footer p {
   font-weight: 600;
   color: white;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(.5);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
 }
 
 @media (max-width: 380px) {
