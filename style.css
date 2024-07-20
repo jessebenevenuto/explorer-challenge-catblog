@@ -39,6 +39,7 @@ input {
 
 header {
   background: hsl(195, 91%, 25%);
+  animation: fromTop 600ms 100ms backwards;
 }
 
 header nav {
@@ -95,9 +96,14 @@ header form {
   border-radius: 50%;
 }
 
+main,
+aside {
+  animation: fromBottom 800ms 100ms backwards;
+}
+
 main > img {
   width: 100%;
-  border-radius: .5rem;
+  border-radius: 1rem;
 }
 
 main .poll {
@@ -221,6 +227,20 @@ footer p {
 
   50% {
     transform: scale(1.05);
+  }
+}
+
+@keyframes fromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes fromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
   }
 }
 
